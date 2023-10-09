@@ -1,0 +1,363 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #FDE9E2;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+     /* Establece un ancho máximo; originalmente tenlía 800px */
+    width: 100%;
+    /*margin: 0; /* Agrega márgenes laterales */
+    box-sizing: border-box; /* Incluye márgenes en el ancho total */
+}
+
+.top-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    margin-left: 80px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.menu ul {
+    list-style: none;
+    text-align: right;
+    padding: 0;
+    margin-top: 10px; /* Agrega margen superior en pantallas pequeñas */
+}
+
+.menu ul li {
+    display: inline;
+    margin-right: 100px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    height: 100%;
+    align-items: center;
+}
+
+.left-section {
+    flex:1;
+    
+}
+
+.right-section {
+    flex:1;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+
+h1 {
+    font-size: 70px;
+    margin: 1px 0;
+    font-family: 'Licorice', cursive;
+    text-align: center;
+}
+
+h2 {
+    font-size: 26px;
+    margin: 0px, 0;
+    font-family: 'IM Fell Double Pica', serif;
+    text-align: center;
+}
+
+p {
+    font-size: 30px;
+    margin: 10px, 0;
+    font-family: 'IM Fell Double Pica', serif;
+    text-align: center;
+    color: #333;
+}
+
+.btn-agendar {
+    display: inline-block;
+    background-color: #7D574A;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+.video-container {
+   
+    width: 80%;
+    border: 20px solid #E6D0C1;
+    border-radius: 10px;
+}
+
+video {
+    display:block;
+    width: 100%;
+    height: auto;
+    /*border-radius: 10px;*/ /*Para dejar en círculo las esquinas del video*/
+}
+
+
+
+/* INICIO 8-10-2023 */
+
+/* Estilos para la sección de Servicios */
+.services-section {
+    background-color: white;
+    padding: 20px 0;
+    
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service-card {
+    width: calc(50% - 20px); /* Dos tarjetas por fila con espacio entre ellas */
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+
+
+/* TARDE 8-10-2023 */
+
+
+/* Estilos para la sección de Contacto */
+.contact-section {
+    display:flex;
+    background-color: #E6D0C1; /* Color de fondo para la sección */
+    padding: 20px 0; /* Espacio alrededor del contenido */
+    text-align: center; /* Alineación del texto en el centro */
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Estilos para el contenedor de la sección de Contacto */
+.contact-section .container {
+    max-width: 100%; /* Ajustar al ancho del contenedor principal */
+    padding: 0 20px;
+}
+
+/* Estilos para los elementos de información de contacto */
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info-item {
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 20px;
+    display: flex; /* Mostrar elementos en línea */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.contact-info-item img {
+    max-width: 40px; /* Tamaño máximo de las imágenes */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.contact-info-item p {
+    margin: 0; /* Eliminar el margen predeterminado del párrafo */
+    font-size: 40px;
+}
+
+/* Estilos para el botón de regresar al inicio */
+.back-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Inicialmente oculto */
+    background-color: #8B4513;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 9999; /* Para asegurarse de que esté sobre otros elementos */
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+}
+
+.back-to-top-button:hover {
+    background-color: #7A635B;
+}
+
+/* Estilos para mostrar el botón solo cuando se desplace hacia abajo */
+body.scrolled .back-to-top-button {
+    display: block;
+}
+
+
+/* tarde 8-10-2023
+
+/* Establecer el ancho de las tarjetas dentro de la sección de servicios */
+.services-section .container {
+    max-width: 100%; /* Ajustar al ancho del contenedor principal */
+    padding: 0 20px;
+}
+
+/* Estilos para las tarjetas de servicios */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 4px solid #E6D0C1; /* Color del borde */
+    margin: 10px;
+    background-color: #e6d0c15c;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    max-width: 100%; /* Hacer que las tarjetas ocupen todo el ancho del contenedor */
+    flex: 1; /* Hacer que las tarjetas ocupen igualmente el espacio en la fila */
+}
+
+/* Estilos para las imágenes de arriba (JPG) */
+.service-card img:nth-child(1) {
+    margin-bottom: 10px;
+    max-width: 20%;
+    height: 20%;
+}
+
+/* Estilos para las imágenes de abajo (PNG) */
+.service-card img:nth-child(2) {
+    margin-top: 10px;
+    max-width: 80%;
+}
+
+/* Estilos para el título (h2) */
+.service-card h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Estilos para las imágenes de arriba (JPG) */
+.service-card img:nth-child(1) {
+    margin-bottom: 10px;
+    max-width: 20%;
+    height: 20%;
+}
+
+/* Estilos para las imágenes de abajo (PNG) */
+.service-card img:nth-child(2) {
+    margin-bottom: 10px;
+    max-width: 20%;
+    height: 20%;
+}
+
+/* Estilos para el título (h2) */
+.service-card h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Estilos para la disposición de las tarjetas */
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Establecer el ancho de las tarjetas dentro de la sección de servicios */
+.services-section .container {
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+
+.footer{
+    flex:1;
+    height: 300px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.footer-map {
+    flex:1;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*FIN 8-10-2023
+/*FIN 8-10-2023
+/*FIN 8-10-2023
+
+
+
+
+
+
+/* Agrega la fuente de tu video en la etiqueta <video> dentro de .right-section */
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .container {
+        margin: 0; /* Elimina los márgenes laterales en pantallas pequeñas */
+    }
+    
+    .menu ul {
+        text-align: center;
+        margin-top: 0; /* Elimina el margen superior en pantallas pequeñas */
+    }
+    
+    .top-section {
+        flex-direction: column; /* Cambia a diseño de columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinea el contenido a la izquierda en pantallas pequeñas */
+    }
+    
+    .menu {
+        margin-top: 20px; /* Agrega margen superior al menú en pantallas pequeñas */
+    }
+    
+    .left-section,
+    .right-section {
+        flex: 1;
+        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+        text-align: center;
+    }
+}

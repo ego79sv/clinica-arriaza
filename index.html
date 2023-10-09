@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Elena Arriaza</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=Inter:wght@200&family=Licorice&display=swap" rel="stylesheet">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <style>
+        /* Estilos para ocultar los enlaces en la parte inferior */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script>
+        // Función para desplazarse al inicio de la página
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Función para desplazamiento suave a una sección
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const yOffset = -50; // Ajusta la posición vertical según necesites
+                const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({
+                    top: y,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Mostrar u ocultar el botón de regresar al inicio según el desplazamiento
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const button = document.querySelector('.back-to-top-button');
+            if (scrollTop > 300) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        });
+
+        // Agregar una clase al body para controlar el estado del desplazamiento
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const body = document.querySelector('body');
+            if (scrollTop > 50) {
+                body.classList.add('scrolled');
+            } else {
+                body.classList.remove('scrolled');
+            }
+        });
+    </script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="top-section">
+                <div class="logo">
+                    <img src="Imagenes/LogoCompleto.jpeg" alt="Logo Clínica">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="javascript:void(0);" onclick="scrollToSection('servicios')">Servicios</a></li>
+                        <!--<li><a href="login.html">Login</a></li>-->
+                        <li><a href="javascript:void(0);" onclick="scrollToSection('contacto')">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-section">
+                <div class="left-section">
+                    <h1>Dra. Elena Arriaza</h1>
+                    <h2>Ortodoncia y Ortopedia Funcional de los Maxilares</h2>
+                    <p>Cambiando al mundo, cambiando sonrisas</p>
+                    <a href="https://koalendar.com/e/meet-with-elena-arriaza-diaz" class="btn-agendar">Agenda tu cita!</a>
+                </div>
+                <div class="right-section">
+                    <div class="video-container">
+                        <video autoplay loop muted>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/nA1dXR7im7o?si=DLl8BdSNyfmwFxCO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="services-section">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="service-cards">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    
+                    <img src="Imagenes/diente.png" alt="Odontologia">
+                    <h2>Odontología</h2>
+                    <p>Prevención, diagnóstico y tratmiento de las enfermedades que afectan a cualquier parte de la estructura mandibular.</p>
+                    
+                    
+                    <!-- Agrega imágenes o videos aquí -->
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <img src="Imagenes/tirantes.png" alt="Capacitaciones">
+                    <h2>Ortodoncia</h2>
+                    <p>Coorige la malposición dental, mejora la funhción de los dientes y soluciona los problemas de mordida.</p>
+                    
+                    <!-- Agrega imágenes o videos aquí -->
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <img src="Imagenes/dentadura.png" alt="Capacitaciones"> 
+                    <h2>Ortopedia Maxilar</h2>
+                    <p>Técnica odontológica que ayuda en la prevención, corrección y tratamiento en los problemas de crecimiento o decrecimiento de las mandibulas.</p>
+                    
+                    <!-- Agrega imágenes o videos aquí -->
+                </div>
+                <!-- Card 4 -->
+                <div class="service-card">
+                    <img src="Imagenes/capacitacion.png" alt="Capacitaciones">
+                    <h2>Capacitaciones</h2>
+                    <p>Adquiere los conocimientos y destrezas necesarias para destacar en el campo de la ortopedia maxilar.</p>
+                    
+                    <!-- Agrega imágenes o videos aquí -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="footer">
+            <h2>Contacto</h2>
+            
+                <div class="contact-info-item">
+                    <img src="Imagenes/ubicacion.png" alt="Imagen 1">
+                    <p>Calle y colonia La Mascota #448, San Salvador</p>
+                </div>
+                <div class="contact-info-item">
+                    <img src="Imagenes/llamada-movil.png" alt="Imagen 2">
+                    <p>2264-5290</p>
+                
+                </div>
+                <div class="contact-info-item">
+                    <img src="Imagenes/llamada-movil.png" alt="Imagen 2">
+                    <p>7695-0330</p>
+                </div>
+        </div>
+ <!-- Footer -->
+ <footer class="footer">
+    <section class="footer-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d969.0853442574711!2d-89.23734906696984!3d13.697762481392772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssv!4v1696805570688!5m2!1sen!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+</footer>
+
+        
+
+
+    <!-- Botón para regresar al inicio en la esquina superior derecha -->
+    <button class="back-to-top-button" onclick="scrollToTop()">Ir arriba</button>
+</body>
+</html>
+
+
+
+
